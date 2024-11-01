@@ -1,0 +1,74 @@
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 90%; /* Makes modal responsive */
+  width: 800px; /* Set a default width for larger screens */
+  max-height: 80%; /* Limit the height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.modal-heading {
+  color: var(--main-color);
+  font-size: 2.5rem;
+}
+.modal-para {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+/* Overlay Background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  z-index: 999;
+  overflow: hidden; /* Prevents background scrolling */
+}
+
+/* Project Images Layout */
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 10px;
+}
+
+.project-images img {
+  width: 100%; /* Makes images responsive */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+  .modal {
+    width: 90%; /* Full width on mobile */
+  }
+
+  .project-images {
+    grid-template-columns: 1fr; /* One image per row */
+  }
+}
+
+.modal-close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background: #0056b3;
+}
